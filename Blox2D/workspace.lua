@@ -2,24 +2,23 @@ local workspace = {}
 
 workspace.genWorld = function()
   return {
-    addItem = function(self, t, cons)
-      local newItem
+    addItem = function(self, t)
       if t == "Box" then
-        newItem = {
+        local newItem = {
           ["Type"] = "Box";
-          ["Size"] = Vector.new(0, 0);
+          ["Size"] = Vector.new(100, 100);
           ["Position"] = Vector.new(0, 0);
           ["IsHollow"] = false;
           ["World"] = self;
+          ["Color"] = Color3.new(0, 0, 0);
 
           Destroy = function(self)
             self.World.Items[self] = nil
           end
         }
         self.Items[newItem] = newItem
+        return newItem
       end
-
-      return newItem
     end,
 
     Render = function(self)
@@ -33,10 +32,7 @@ workspace.genWorld = function()
     Items = {};
 
     Camera = {
-      ["Position"] = {
-        ["X"] = 0;
-        ["Y"] = 0;
-      }
+      ["Position"] = Vector.new(0, 0)
     }
   }
 end
