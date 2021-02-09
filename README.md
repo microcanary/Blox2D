@@ -1,5 +1,5 @@
 # Blox2D
-*Roblox-like enviroment for roblox.*
+*Roblox-like enviroment for Love2D.*
 
 Comparison:
 
