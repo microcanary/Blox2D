@@ -89,7 +89,7 @@ The last 2 are in the render category. They run with or after the renderring occ
 Draw happens right on par with world and gui rendering.  
 PostRender is when the GUI, workspace, etc. are all done renderring. It is last.  
 
-All contain the dt parameter.  
+All have dt as the first parameter.  
 
 Example code:
 ```lua
@@ -114,7 +114,7 @@ local myBox = Instance.new("Part")
 myBox.Parent = workspace
 myBox.Size = Vector3.new(50, 50, 50)
 myBox.Position = Vector3.new(300, 300, 300)
-myBox.Color = Color3.fromRGB(255, 255, 255, 1)
+myBox.Color = Color3.fromRGB(255, 255, 255)
 
 local a = 0
 RunService.RenderStepped:Connect(function(dt)
