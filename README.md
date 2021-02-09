@@ -143,7 +143,7 @@ end)
 Nonetheless, you will usually only work on the main UI provided, which automatically renders, and doesn't need creation.  
 
 
-The world object has an addItem method, that acts simillarly to Roblox's Instance.new().  
+The UI object has an addItem method, that acts simillarly to Roblox's Instance.new().  
 Here is the current list of items and their properties:  
 
 ```
